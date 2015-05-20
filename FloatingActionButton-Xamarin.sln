@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAB.Bind-Xamarin.Android", "FAB.Bind\FAB.Bind-Xamarin.Android.csproj", "{ABDEA385-DBF4-45D3-A2D1-83C8F4C399A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAB.Sample", "FAB.Sample\FAB.Sample.csproj", "{D4B5389D-C310-4BB3-AC4B-48BB1182ACB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABDEA385-DBF4-45D3-A2D1-83C8F4C399A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDEA385-DBF4-45D3-A2D1-83C8F4C399A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDEA385-DBF4-45D3-A2D1-83C8F4C399A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDEA385-DBF4-45D3-A2D1-83C8F4C399A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B5389D-C310-4BB3-AC4B-48BB1182ACB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B5389D-C310-4BB3-AC4B-48BB1182ACB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B5389D-C310-4BB3-AC4B-48BB1182ACB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B5389D-C310-4BB3-AC4B-48BB1182ACB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.IndentSwitchBody = True
+		$2.IndentBlocksInsideExpressions = True
+		$2.AnonymousMethodBraceStyle = NextLine
+		$2.PropertyBraceStyle = NextLine
+		$2.PropertyGetBraceStyle = NextLine
+		$2.PropertySetBraceStyle = NextLine
+		$2.EventBraceStyle = NextLine
+		$2.EventAddBraceStyle = NextLine
+		$2.EventRemoveBraceStyle = NextLine
+		$2.StatementBraceStyle = NextLine
+		$2.ElseNewLinePlacement = NewLine
+		$2.CatchNewLinePlacement = NewLine
+		$2.FinallyNewLinePlacement = NewLine
+		$2.WhileNewLinePlacement = DoNotCare
+		$2.ArrayInitializerWrapping = DoNotChange
+		$2.ArrayInitializerBraceStyle = NextLine
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.NewLineBeforeConstructorInitializerColon = NewLine
+		$2.NewLineAfterConstructorInitializerColon = SameLine
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.SpacesBeforeBrackets = False
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		version = 1.5.0
+	EndGlobalSection
+EndGlobal

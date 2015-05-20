@@ -1,0 +1,84 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  	<remove-node path="/api/package[@name='com.github.clans.fab']/class[@name='Util']" />
+  	<remove-node path="/api/package[@name='com.github.clans.fab']/class[@name='BuildConfig']" />
+
+	<attr path="/api/package[@name='com.github.clans.fab']" name="managedName">Clans.Fab</attr>
+
+	<!-- All packages parameters -->
+	<attr path="/api/package//parameter[@type='android.util.AttributeSet']" name="name">attrs</attr>
+	<attr path="/api/package//parameter[@type='android.content.Context']" name="name">context</attr>
+
+	<!-- FloatActionButton Constructor -->
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton']/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton']/parameter[@name='p3' and @type='int']" name="name">defStyleRes</attr>
+
+	<!-- FloatActionButton Methods -->
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorNormalResId']/parameter[@name='p0']" name="name">colorResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorPressedResId']/parameter[@name='p0']" name="name">colorResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorRippleResId']/parameter[@name='p0']" name="name">colorResId</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShowShadow']/parameter[@name='p0']" name="name">show</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowRadius']/parameter[@name='p0' and @type='int']" name="name">dimenResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowRadius']/parameter[@name='p0' and @type='float']" name="name">shadowRadiusDp</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowXOffset']/parameter[@name='p0' and @type='int']" name="name">dimenResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowXOffset']/parameter[@name='p0' and @type='float']" name="name">shadowXOffsetDp</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowYOffset']/parameter[@name='p0' and @type='int']" name="name">dimenResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShadowYOffset']/parameter[@name='p0' and @type='float']" name="name">shadowYOffsetDp</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='show']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='hide']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='toggle']/parameter[@name='p0']" name="name">animate</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShowAnimation']/parameter[@name='p0']" name="name">showAnimation</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setHideAnimation']/parameter[@name='p0']" name="name">hideAnimation</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setElevationCompat']/parameter[@name='p0']" name="name">elevation</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setIndeterminate']/parameter[@name='p0']" name="name">indeterminate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShowProgressBackground']/parameter[@name='p0']" name="name">show</attr>
+
+
+	<!-- FloatActionMenu Constructor -->
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/constructor/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
+
+	<!-- FloatActionMenu Methods -->
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='toggle']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='open']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='close']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setIconAnimationInterpolator']/parameter[@name='p0']" name="name">interpolator</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setIconAnimationOpenInterpolator']/parameter[@name='p0']" name="name">openInterpolator</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setIconAnimationCloseInterpolator']/parameter[@name='p0']" name="name">closeInterpolator</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setAnimated']/parameter[@name='p0']" name="name">animated</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setAnimationDelayPerItem']/parameter[@name='p0']" name="name">animationDelayPerItem</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setOnMenuToggleListener']/parameter[@name='p0']" name="name">listener</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setIconAnimated']/parameter[@name='p0']" name="name">animated</attr>
+
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setIconToggleAnimatorSet']/parameter[@name='p0']" name="name">toggleAnimatorSet</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonShowAnimation']/parameter[@name='p0']" name="name">showAnimation</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonHideAnimation']/parameter[@name='p0']" name="name">hideAnimation</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='showMenuButton']/parameter[@name='p0']" name="name">animate</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='hideMenuButton']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='toggleMenuButton']/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setClosedOnTouchOutside']/parameter[@name='p0']" name="name">close</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorNormal']/parameter[@name='p0']" name="name">color</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorNormalResId']/parameter[@name='p0']" name="name">colorResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorPressed']/parameter[@name='p0']" name="name">color</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorPressedResId']/parameter[@name='p0']" name="name">colorResId</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorRipple']/parameter[@name='p0']" name="name">color</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setMenuButtonColorRippleResId']/parameter[@name='p0']" name="name">colorResId</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='addMenuButton']/parameter[@name='p0']" name="name">fab</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='removeMenuButton']/parameter[@name='p0']" name="name">fab</attr>
+
+
+	<attr path="/api/package[@name='com.github.clans.fab']/interface[@name='FloatingActionMenu.OnMenuToggleListener']/method[@name='onMenuToggle']/parameter[@name='p0']" name="name">opened</attr>
+</metadata>
