@@ -1,11 +1,4 @@
 ﻿<metadata>
-	<!--
-  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  
-  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
   	<remove-node path="/api/package[@name='com.github.clans.fab']/class[@name='Util']" />
   	<remove-node path="/api/package[@name='com.github.clans.fab']/class[@name='BuildConfig']" />
 
@@ -16,8 +9,10 @@
 	<attr path="/api/package//parameter[@type='android.content.Context']" name="name">context</attr>
 
 	<!-- FloatActionButton Constructor -->
-	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton']/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
-	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton']/parameter[@name='p3' and @type='int']" name="name">defStyleRes</attr>
+		<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[@name='p3' and @type='int']" name="name">defStyleRes</attr>
 
 	<!-- FloatActionButton Methods -->
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorNormalResId']/parameter[@name='p0']" name="name">colorResId</attr>
@@ -45,7 +40,7 @@
 
 
 	<!-- FloatActionMenu Constructor -->
-	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/constructor/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/constructor[@name='FloatingActionMenu' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
 
 	<!-- FloatActionMenu Methods -->
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='toggle']/parameter[@name='p0']" name="name">animate</attr>

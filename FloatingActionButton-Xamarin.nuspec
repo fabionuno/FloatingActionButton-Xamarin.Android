@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>FAB.XamarinAndroid</id>
+    <version>1.0.0</version>
+    <title>FAB for Xamarin.Android</title>
+    <authors>Fabio Nuno</authors>
+    <owners>Fabio Nuno</owners>
+    <projectUrl>https://github.com/fabionuno/FloatingActionButton-Xamarin.Android</projectUrl>
+    <licenseUrl>https://github.com/fabionuno/FloatingActionButton-Xamarin.Android/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/fabionuno/FloatingActionButton-Xamarin.Android/master/art/nugeticon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Yet another implementation of Floating Action Button for Android with lots of features.</description>
+    <summary>This is a Java bind of Clans's Floating Action Button </summary>
+    <copyright>Copyright 2015</copyright>
+    <tags>fab, floating action button, xamarin, xamarin android</tags>
+  </metadata>
+  <files>
+    <file src="FAB.Bind/bin/Release/FloatingActionButton-Xamarin.dll" target="lib\MonoAndroid50\FloatingActionButton-Xamarin.dll" />
+  </files>
+</package>
