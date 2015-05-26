@@ -15,6 +15,9 @@
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/constructor[@name='FloatingActionButton' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[@name='p3' and @type='int']" name="name">defStyleRes</attr>
 
 	<!-- FloatActionButton Methods -->
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setProgress' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[@name='p0']" name="name">progress</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setProgress' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[@name='p1']" name="name">animate</attr>
+
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorNormalResId']/parameter[@name='p0']" name="name">colorResId</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorPressedResId']/parameter[@name='p0']" name="name">colorResId</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setColorRippleResId']/parameter[@name='p0']" name="name">colorResId</attr>

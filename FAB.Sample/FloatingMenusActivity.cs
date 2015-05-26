@@ -114,7 +114,7 @@ namespace FAB.Demo
 
             new Handler().PostDelayed(() => fabEdit.Show(true), delay + 150);
 
-            //fabEdit.Click 
+            fabEdit.Click += EditButtonClickHandler;
 
             CreateCustomAnimation();
         }
@@ -163,6 +163,10 @@ namespace FAB.Demo
             menu3.IconToggleAnimatorSet = set;
         }
     
+        private void EditButtonClickHandler(object sender, EventArgs e)
+        {
+            StartActivity(new Intent(this, typeof(RecyclerViewActivity)));
+        }
     
         private void ActionButtonClickHandler(object sender, EventArgs e)
         {

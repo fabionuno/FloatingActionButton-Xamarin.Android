@@ -49,12 +49,17 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FloatingMenusActivity.cs" />
+    <Compile Include="RecyclerViewActivity.cs" />
+    <Compile Include="Adapter\LanguageAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -111,6 +116,7 @@
     <Folder Include="Resources\Resources\" />
     <Folder Include="Resources\anim\" />
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Adapter\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FAB.Bind\FAB.Bind-Xamarin.Android.csproj">
