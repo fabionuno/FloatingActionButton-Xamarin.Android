@@ -99,14 +99,15 @@ namespace FAB.Demo
             fab22 = FindViewById<FloatingActionButton>(Resource.Id.fab22);
             fab32 = FindViewById<FloatingActionButton>(Resource.Id.fab32);
 
-            fab1.Click += ActionButtonClickHandler;
-            fab2.Click += ActionButtonClickHandler;
-            fab3.Click += ActionButtonClickHandler;
+            fab1.Click += ActionButton_Click;
+            fab2.Click += ActionButton_Click;
+            fab3.Click += ActionButton_Click;
 
-            fab12.Click += ActionButtonClickHandler;
-            fab22.Click += ActionButtonClickHandler;
-            fab32.Click += ActionButtonClickHandler;
+            fab12.Click += ActionButton_Click;
+            fab22.Click += ActionButton_Click;
+            fab32.Click += ActionButton_Click;
 
+            fab1.Enabled = false;
 
             FloatingActionButton fabEdit = FindViewById<FloatingActionButton>(Resource.Id.fab_edit);
             fabEdit.SetShowAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.scale_up));
@@ -114,7 +115,7 @@ namespace FAB.Demo
 
             new Handler().PostDelayed(() => fabEdit.Show(true), delay + 150);
 
-            fabEdit.Click += EditButtonClickHandler;
+            fabEdit.Click += EditButton_Click;
 
             CreateCustomAnimation();
         }
@@ -163,16 +164,24 @@ namespace FAB.Demo
             menu3.IconToggleAnimatorSet = set;
         }
     
-        private void EditButtonClickHandler(object sender, EventArgs e)
+        private void EditButton_Click(object sender, EventArgs e)
         {
             StartActivity(new Intent(this, typeof(RecyclerViewActivity)));
         }
     
-        private void ActionButtonClickHandler(object sender, EventArgs e)
+        private void ActionButton_Click(object sender, EventArgs e)
         {
             FloatingActionButton fabButton = sender as FloatingActionButton;
             if (fabButton != null)
             {
+                if (fabButton.Id == Resource.Id.fab2)
+                {
+                    fabButton.Visibility = ViewStates.Gone;
+                }
+                else if (fabButton.Id == Resource.Id.fab3)
+                {
+                    fabButton.Visibility = ViewStates.Visible;
+                }
                 Toast.MakeText(this, fabButton.LabelText, ToastLength.Short).Show();
             }
         }

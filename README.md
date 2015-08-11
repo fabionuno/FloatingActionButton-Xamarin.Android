@@ -3,7 +3,7 @@
 
 ### Description
 
-This is a Java Library binding for the [Clans FloatingActionButton](https://github.com/Clans/FloatingActionButton). I've also ported the Android sample project to show some of the features in action.
+This is a Java Library binding for the [Clans FloatingActionButton](https://github.com/Clans/FloatingActionButton)  version **1.5.5**. I've also ported the Android sample project to show some of the features in action.
 
 # Requirements
 The library requires Android **API Level 14+**.

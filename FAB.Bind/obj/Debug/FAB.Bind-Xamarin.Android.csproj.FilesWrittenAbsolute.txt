@@ -1,1 +1,0 @@
-/Users/nuno/Documents/projetos/github/FloatingActionButton-Xamarin.Android/FAB.Bind/obj/Debug/MonoAndroid,Version=v5.0.AssemblyAttribute.cs
