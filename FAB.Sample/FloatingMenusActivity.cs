@@ -19,7 +19,7 @@ using Clans.Fab;
 namespace FAB.Demo
 {
     [Activity(Label = "@string/floating_action_menu")]			
-    public class FloatingMenusActivity : AppCompatActivity
+    public class FloatingMenusActivity : AppCompatActivity, View.IOnClickListener
     {
         private FloatingActionButton fab1;
         private FloatingActionButton fab2;
@@ -80,7 +80,9 @@ namespace FAB.Demo
                 mUiHandler.PostDelayed(() => menu.ShowMenuButton(true), delay);
                 delay += 150;
             }
+                
 
+            menu1.SetOnMenuButtonClickListener(this);
             menu1.SetClosedOnTouchOutside(true);
 
             menu4.IconAnimated = false;
@@ -185,8 +187,17 @@ namespace FAB.Demo
                 Toast.MakeText(this, fabButton.LabelText, ToastLength.Short).Show();
             }
         }
+ 
+
+        public void OnClick(View v)
+        {
+            FloatingActionMenu menu = (FloatingActionMenu)v.Parent;
+            if (menu.Id == Resource.Id.menu1 && menu.IsOpened)
+            {
+                Toast.MakeText(this, menu.MenuButtonLabelText, ToastLength.Short).Show();
+            }
+
+            menu.Toggle(animate: true);
+        }
     }
 }
-
-
-

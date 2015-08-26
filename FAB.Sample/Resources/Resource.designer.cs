@@ -551,6 +551,15 @@ namespace FAB.Demo
 			// aapt resource value: 0x7f010101
 			public const int menu_colorRipple = 2130772225;
 			
+			// aapt resource value: 0x7f010106
+			public const int menu_fab_hide_animation = 2130772230;
+			
+			// aapt resource value: 0x7f010104
+			public const int menu_fab_label = 2130772228;
+			
+			// aapt resource value: 0x7f010105
+			public const int menu_fab_show_animation = 2130772229;
+			
 			// aapt resource value: 0x7f0100f9
 			public const int menu_fab_size = 2130772217;
 			
@@ -3509,7 +3518,10 @@ namespace FAB.Demo
 					2130772224,
 					2130772225,
 					2130772226,
-					2130772227};
+					2130772227,
+					2130772228,
+					2130772229,
+					2130772230};
 			
 			// aapt resource value: 19
 			public const int FloatingActionMenu_menu_animationDelayPerItem = 19;
@@ -3531,6 +3543,15 @@ namespace FAB.Demo
 			
 			// aapt resource value: 32
 			public const int FloatingActionMenu_menu_colorRipple = 32;
+			
+			// aapt resource value: 37
+			public const int FloatingActionMenu_menu_fab_hide_animation = 37;
+			
+			// aapt resource value: 35
+			public const int FloatingActionMenu_menu_fab_label = 35;
+			
+			// aapt resource value: 36
+			public const int FloatingActionMenu_menu_fab_show_animation = 36;
 			
 			// aapt resource value: 24
 			public const int FloatingActionMenu_menu_fab_size = 24;

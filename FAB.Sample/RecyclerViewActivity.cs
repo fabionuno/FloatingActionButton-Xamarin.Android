@@ -54,7 +54,7 @@ namespace FAB.Demo
             recyclerView.HasFixedSize = true;
             recyclerView.SetLayoutManager(new LinearLayoutManager(this));
             recyclerView.SetAdapter(new LanguageAdapter(locales));
-            recyclerView.SetOnScrollListener(new RecyclerScrollListener(this.fab, this.scrollOffset));
+            recyclerView.AddOnScrollListener(new RecyclerScrollListener(this.fab, this.scrollOffset));
         }
 
         private void FabClickHandler(object sender, EventArgs e)
