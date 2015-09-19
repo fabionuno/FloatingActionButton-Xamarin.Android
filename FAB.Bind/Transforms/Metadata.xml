@@ -81,7 +81,10 @@
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='removeMenuButton']/parameter[@name='p0']" name="name">fab</attr>
 
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setOnMenuButtonClickListener']/parameter[@name='p0']" name="name">clickListener</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='showMenu' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[@name='p0']" name="name">animate</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='hideMenu' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[@name='p0']" name="name">animate</attr>
 
 
 	<attr path="/api/package[@name='com.github.clans.fab']/interface[@name='FloatingActionMenu.OnMenuToggleListener']/method[@name='onMenuToggle']/parameter[@name='p0']" name="name">opened</attr>
+
 </metadata>
