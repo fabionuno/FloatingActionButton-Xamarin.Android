@@ -4,8 +4,8 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/github"
-        android:title="GitHub"
+        android:id="@+id/menu_snack"
+        android:title="SnackBar"
         app:showAsAction="never" />
 
 </menu>

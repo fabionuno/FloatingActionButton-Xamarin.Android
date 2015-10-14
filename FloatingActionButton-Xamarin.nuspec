@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FAB.XamarinAndroid</id>
-    <version>1.6.1.0</version>
+    <version>1.6.1.1</version>
     <title>FAB for Xamarin.Android</title>
     <authors>Fabio Nuno</authors>
     <owners>Fabio Nuno</owners>
@@ -21,6 +21,6 @@ Fixes the package target to use MonoAndroid4;
     <tags>fab, floating action button, xamarin, xamarin android</tags>
   </metadata>
   <files>
-    <file src="FAB.Bind/bin/Release/FloatingActionButton-Xamarin.*" target="lib\MonoAndroid4" />
+    <file src="FAB.Bind/bin/Release/FloatingActionButton-Xamarin.*" target="lib\MonoAndroid50" />
   </files>
 </package>
