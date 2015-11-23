@@ -16,7 +16,7 @@
     <AssemblyName>demo</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <ReleaseVersion>1.6.1.0</ReleaseVersion>
+    <ReleaseVersion>1.6.2.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,7 +117,6 @@
     <AndroidResource Include="Resources\values-w820dp\dimens.xml" />
     <AndroidResource Include="Resources\layout\activity_snackbar.axml" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\Resources\" />
     <Folder Include="Resources\anim\" />
@@ -130,4 +129,5 @@
       <Name>FAB.Bind-Xamarin.Android</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
