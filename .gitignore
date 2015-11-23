@@ -5,3 +5,5 @@ FAB.Bind/bin
 FAB.Bind/obj
 FAB.Sample/bin
 FAB.Sample/obj
+
+*.userprefs
