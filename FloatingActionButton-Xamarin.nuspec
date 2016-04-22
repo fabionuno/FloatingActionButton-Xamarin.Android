@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>FAB.XamarinAndroid</id>
-    <version>1.6.2.0</version>
+    <version>1.6.3.0</version>
     <title>FAB for Xamarin.Android</title>
     <authors>Fabio Nuno</authors>
     <owners>Fabio Nuno</owners>
@@ -12,11 +12,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Yet another implementation of Floating Action Button for Android with lots of features.</description>
     <releaseNotes>
-      Supports Clans FloatingActionButton version 1.6.2;
+      Supports Clans FloatingActionButton version 1.6.3;
 More details in https://github.com/Clans/FloatingActionButton/wiki/Changelog
     </releaseNotes>
     <summary>This is a Java bind of Clans's Floating Action Button </summary>
-    <copyright>Copyright 2015</copyright>
+    <copyright>Copyright 2016</copyright>
     <tags>fab, floating action button, xamarin, xamarin android</tags>
   </metadata>
   <files>

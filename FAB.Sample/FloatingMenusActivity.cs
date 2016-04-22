@@ -15,6 +15,7 @@ using Android.Support.V7.App;
 using Android.Views.Animations;
 using Android.Animation;
 using Clans.Fab;
+using Android.Support.V4.Content;
 
 namespace FAB.Demo
 {
@@ -39,19 +40,20 @@ namespace FAB.Demo
 
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
 
-            FloatingActionMenu menu1 = FindViewById<FloatingActionMenu>(Resource.Id.menu1);
-            FloatingActionMenu menu2 = FindViewById<FloatingActionMenu>(Resource.Id.menu2);
-            FloatingActionMenu menu3 = FindViewById<FloatingActionMenu>(Resource.Id.menu3);
-            FloatingActionMenu menu4 = FindViewById<FloatingActionMenu>(Resource.Id.menu4);
+            FloatingActionMenu menu1 = FindViewById<FloatingActionMenu>(Resource.Id.menu_red);
+            FloatingActionMenu menu2 = FindViewById<FloatingActionMenu>(Resource.Id.menu_yellow);
+            FloatingActionMenu menu3 = FindViewById<FloatingActionMenu>(Resource.Id.menu_green);
+            FloatingActionMenu menu4 = FindViewById<FloatingActionMenu>(Resource.Id.menu_blue);
             FloatingActionMenu menuDown = FindViewById<FloatingActionMenu>(Resource.Id.menu_down);
             FloatingActionMenu menuLabelsRight = FindViewById<FloatingActionMenu>(Resource.Id.menu_labels_right);
 
             FloatingActionButton programFab1 = new FloatingActionButton(this);
 
             programFab1.ButtonSize = FloatingActionButton.SizeMini;
-            programFab1.LabelText = "Programmatically added button";
+            programFab1.LabelText = this.GetString(Resource.String.lorem_ipsum);
             programFab1.SetImageResource(Resource.Drawable.ic_edit);
             menu1.AddMenuButton(programFab1);
+            programFab1.Click += ProgramFab1_Click;
 
             ContextThemeWrapper context = new ContextThemeWrapper(this, Resource.Style.MenuButtonsStyle);
             FloatingActionButton programFab2 = new FloatingActionButton(context);
@@ -138,7 +140,7 @@ namespace FAB.Demo
 
         private void CreateCustomAnimation()
         {
-            FloatingActionMenu menu3 = FindViewById<FloatingActionMenu>(Resource.Id.menu3);
+            FloatingActionMenu menu3 = FindViewById<FloatingActionMenu>(Resource.Id.menu_green);
 
             AnimatorSet set = new AnimatorSet();
 
@@ -192,12 +194,25 @@ namespace FAB.Demo
         public void OnClick(View v)
         {
             FloatingActionMenu menu = (FloatingActionMenu)v.Parent;
-            if (menu.Id == Resource.Id.menu1 && menu.IsOpened)
+            if (menu.Id == Resource.Id.menu_red && menu.IsOpened)
             {
                 Toast.MakeText(this, menu.MenuButtonLabelText, ToastLength.Short).Show();
             }
 
             menu.Toggle(animate: true);
+        }
+
+        private void ProgramFab1_Click (object sender, EventArgs e)
+        {
+            var fab = sender as FloatingActionButton;
+
+            if (fab != null)
+            {
+                fab.SetLabelColors(ContextCompat.GetColor(this, Resource.Color.grey),
+                    ContextCompat.GetColor(this, Resource.Color.light_grey),
+                    ContextCompat.GetColor(this, Resource.Color.white_transparent));
+                fab.SetLabelTextColor(ContextCompat.GetColor(this, Resource.Color.black));
+            }
         }
     }
 }

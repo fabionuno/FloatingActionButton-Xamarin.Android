@@ -44,6 +44,13 @@
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setIndeterminate']/parameter[@name='p0']" name="name">indeterminate</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setShowProgressBackground']/parameter[@name='p0']" name="name">show</attr>
 
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelColors' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[@name='p0']" name="name">colorNormal</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelColors' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[@name='p1']" name="name">colorPressed</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelColors' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[@name='p2']" name="name">colorRipple</attr>
+
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelTextColor' and count(parameter)=1 and parameter[1][@type='android.content.res.ColorStateList']]/parameter[@name='p0']" name="name">colors</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelTextColor' and count(parameter)=1 and parameter[1][@type='int']]/parameter[@name='p0']" name="name">color</attr>
+
 
 	<!-- FloatActionMenu Constructor -->
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/constructor[@name='FloatingActionMenu' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
@@ -86,5 +93,4 @@
 
 
 	<attr path="/api/package[@name='com.github.clans.fab']/interface[@name='FloatingActionMenu.OnMenuToggleListener']/method[@name='onMenuToggle']/parameter[@name='p0']" name="name">opened</attr>
-
 </metadata>
