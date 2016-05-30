@@ -51,6 +51,10 @@
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelTextColor' and count(parameter)=1 and parameter[1][@type='android.content.res.ColorStateList']]/parameter[@name='p0']" name="name">colors</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='setLabelTextColor' and count(parameter)=1 and parameter[1][@type='int']]/parameter[@name='p0']" name="name">color</attr>
 
+  	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='onRestoreInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Parcelable']]" name="visibility">protected</attr>
+  	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='onRestoreInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Parcelable']]/parameter[@name='p0']" name="name">state</attr>
+  	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionButton']/method[@name='onSaveInstanceState' and count(parameter)=0]" name="visibility">protected</attr>
+
 
 	<!-- FloatActionMenu Constructor -->
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/constructor[@name='FloatingActionMenu' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]/parameter[@name='p2' and @type='int']" name="name">defStyleAttr</attr>
@@ -88,6 +92,7 @@
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='removeMenuButton']/parameter[@name='p0']" name="name">fab</attr>
 
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setOnMenuButtonClickListener']/parameter[@name='p0']" name="name">clickListener</attr>
+	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='setOnMenuButtonLongClickListener']/parameter[@name='p0']" name="name">longClickListener</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='showMenu' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[@name='p0']" name="name">animate</attr>
 	<attr path="/api/package[@name='com.github.clans.fab']/class[@name='FloatingActionMenu']/method[@name='hideMenu' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[@name='p0']" name="name">animate</attr>
 

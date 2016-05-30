@@ -1,7 +1,7 @@
 # Floating Action Button for Xamarin.Android
 [![NuGet version](https://badge.fury.io/nu/FAB.XamarinAndroid.svg)](http://badge.fury.io/nu/FAB.XamarinAndroid)
 
-This is a Java Library binding for the [Clans FloatingActionButton](https://github.com/Clans/FloatingActionButton)  version **1.6.3**. I've also ported the Android sample project to show some of the features in action.
+This is a Java Library binding for the [Clans FloatingActionButton](https://github.com/Clans/FloatingActionButton)  version **1.6.4**. I've also ported the Android sample project to show some of the features in action.
 
 ### Installation
 To add this binding to your Xamarin.Android project [use the NuGet package](https://www.nuget.org/packages/FAB.XamarinAndroid/) :

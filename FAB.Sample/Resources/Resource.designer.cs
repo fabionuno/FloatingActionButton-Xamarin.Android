@@ -707,8 +707,8 @@ namespace FAB.Demo
 			// aapt resource value: 0x7f010141
 			public const int menu_animationDelayPerItem = 2130772289;
 			
-			// aapt resource value: 0x7f010150
-			public const int menu_backgroundColor = 2130772304;
+			// aapt resource value: 0x7f010151
+			public const int menu_backgroundColor = 2130772305;
 			
 			// aapt resource value: 0x7f01012f
 			public const int menu_buttonSpacing = 2130772271;
@@ -716,23 +716,23 @@ namespace FAB.Demo
 			// aapt resource value: 0x7f010142
 			public const int menu_buttonToggleAnimation = 2130772290;
 			
-			// aapt resource value: 0x7f01014c
-			public const int menu_colorNormal = 2130772300;
-			
 			// aapt resource value: 0x7f01014d
-			public const int menu_colorPressed = 2130772301;
+			public const int menu_colorNormal = 2130772301;
 			
 			// aapt resource value: 0x7f01014e
-			public const int menu_colorRipple = 2130772302;
+			public const int menu_colorPressed = 2130772302;
 			
-			// aapt resource value: 0x7f010153
-			public const int menu_fab_hide_animation = 2130772307;
+			// aapt resource value: 0x7f01014f
+			public const int menu_colorRipple = 2130772303;
 			
-			// aapt resource value: 0x7f010151
-			public const int menu_fab_label = 2130772305;
+			// aapt resource value: 0x7f010154
+			public const int menu_fab_hide_animation = 2130772308;
 			
 			// aapt resource value: 0x7f010152
-			public const int menu_fab_show_animation = 2130772306;
+			public const int menu_fab_label = 2130772306;
+			
+			// aapt resource value: 0x7f010153
+			public const int menu_fab_show_animation = 2130772307;
 			
 			// aapt resource value: 0x7f010146
 			public const int menu_fab_size = 2130772294;
@@ -751,6 +751,9 @@ namespace FAB.Demo
 			
 			// aapt resource value: 0x7f01013a
 			public const int menu_labels_cornerRadius = 2130772282;
+			
+			// aapt resource value: 0x7f010148
+			public const int menu_labels_customFont = 2130772296;
 			
 			// aapt resource value: 0x7f010144
 			public const int menu_labels_ellipsize = 2130772292;
@@ -800,20 +803,20 @@ namespace FAB.Demo
 			// aapt resource value: 0x7f010139
 			public const int menu_labels_textSize = 2130772281;
 			
-			// aapt resource value: 0x7f01014f
-			public const int menu_openDirection = 2130772303;
-			
-			// aapt resource value: 0x7f010148
-			public const int menu_shadowColor = 2130772296;
+			// aapt resource value: 0x7f010150
+			public const int menu_openDirection = 2130772304;
 			
 			// aapt resource value: 0x7f010149
-			public const int menu_shadowRadius = 2130772297;
+			public const int menu_shadowColor = 2130772297;
 			
 			// aapt resource value: 0x7f01014a
-			public const int menu_shadowXOffset = 2130772298;
+			public const int menu_shadowRadius = 2130772298;
 			
 			// aapt resource value: 0x7f01014b
-			public const int menu_shadowYOffset = 2130772299;
+			public const int menu_shadowXOffset = 2130772299;
+			
+			// aapt resource value: 0x7f01014c
+			public const int menu_shadowYOffset = 2130772300;
 			
 			// aapt resource value: 0x7f01012e
 			public const int menu_showShadow = 2130772270;
@@ -4973,13 +4976,14 @@ namespace FAB.Demo
 					2130772304,
 					2130772305,
 					2130772306,
-					2130772307};
+					2130772307,
+					2130772308};
 			
 			// aapt resource value: 19
 			public const int FloatingActionMenu_menu_animationDelayPerItem = 19;
 			
-			// aapt resource value: 34
-			public const int FloatingActionMenu_menu_backgroundColor = 34;
+			// aapt resource value: 35
+			public const int FloatingActionMenu_menu_backgroundColor = 35;
 			
 			// aapt resource value: 1
 			public const int FloatingActionMenu_menu_buttonSpacing = 1;
@@ -4987,23 +4991,23 @@ namespace FAB.Demo
 			// aapt resource value: 20
 			public const int FloatingActionMenu_menu_buttonToggleAnimation = 20;
 			
-			// aapt resource value: 30
-			public const int FloatingActionMenu_menu_colorNormal = 30;
-			
 			// aapt resource value: 31
-			public const int FloatingActionMenu_menu_colorPressed = 31;
+			public const int FloatingActionMenu_menu_colorNormal = 31;
 			
 			// aapt resource value: 32
-			public const int FloatingActionMenu_menu_colorRipple = 32;
+			public const int FloatingActionMenu_menu_colorPressed = 32;
 			
-			// aapt resource value: 37
-			public const int FloatingActionMenu_menu_fab_hide_animation = 37;
+			// aapt resource value: 33
+			public const int FloatingActionMenu_menu_colorRipple = 33;
 			
-			// aapt resource value: 35
-			public const int FloatingActionMenu_menu_fab_label = 35;
+			// aapt resource value: 38
+			public const int FloatingActionMenu_menu_fab_hide_animation = 38;
 			
 			// aapt resource value: 36
-			public const int FloatingActionMenu_menu_fab_show_animation = 36;
+			public const int FloatingActionMenu_menu_fab_label = 36;
+			
+			// aapt resource value: 37
+			public const int FloatingActionMenu_menu_fab_show_animation = 37;
 			
 			// aapt resource value: 24
 			public const int FloatingActionMenu_menu_fab_size = 24;
@@ -5022,6 +5026,9 @@ namespace FAB.Demo
 			
 			// aapt resource value: 12
 			public const int FloatingActionMenu_menu_labels_cornerRadius = 12;
+			
+			// aapt resource value: 26
+			public const int FloatingActionMenu_menu_labels_customFont = 26;
 			
 			// aapt resource value: 22
 			public const int FloatingActionMenu_menu_labels_ellipsize = 22;
@@ -5071,20 +5078,20 @@ namespace FAB.Demo
 			// aapt resource value: 11
 			public const int FloatingActionMenu_menu_labels_textSize = 11;
 			
-			// aapt resource value: 33
-			public const int FloatingActionMenu_menu_openDirection = 33;
-			
-			// aapt resource value: 26
-			public const int FloatingActionMenu_menu_shadowColor = 26;
+			// aapt resource value: 34
+			public const int FloatingActionMenu_menu_openDirection = 34;
 			
 			// aapt resource value: 27
-			public const int FloatingActionMenu_menu_shadowRadius = 27;
+			public const int FloatingActionMenu_menu_shadowColor = 27;
 			
 			// aapt resource value: 28
-			public const int FloatingActionMenu_menu_shadowXOffset = 28;
+			public const int FloatingActionMenu_menu_shadowRadius = 28;
 			
 			// aapt resource value: 29
-			public const int FloatingActionMenu_menu_shadowYOffset = 29;
+			public const int FloatingActionMenu_menu_shadowXOffset = 29;
+			
+			// aapt resource value: 30
+			public const int FloatingActionMenu_menu_shadowYOffset = 30;
 			
 			// aapt resource value: 0
 			public const int FloatingActionMenu_menu_showShadow = 0;
