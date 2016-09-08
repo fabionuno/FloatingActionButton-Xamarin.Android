@@ -1,111 +1,109 @@
 ﻿using System;
 using System.Linq;
-
 using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-
-using Android.Support.V7.AppCompat;
+using Android.Support.Design.Widget;
+using Android.Support.V4.Widget;
 using Android.Support.V7.App;
+using Android.Support.V7.AppCompat;
+using Android.Views;
 using Android.Views.Animations;
-using Clans.Fab;
+using Android.Widget;
 
+using Toolbar = Android.Support.V7.Widget.Toolbar;
+using FloatingActionButton = Clans.Fab.FloatingActionButton;
+using Fragment = Android.Support.V4.App.Fragment;
+using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 namespace FAB.Demo
 {
     [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        private int mPreviousVisibleItem;
-        private FloatingActionButton fab;
-        private ListView listView;
+        private DrawerLayout drawerLayout;
+        private ActionBarDrawerToggle toggle;
+        private NavigationView navigationView;
 
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.main_activity);
 
-            var locales = Java.Util.Locale.GetAvailableLocales().Select(c => c.DisplayName).ToList<String>();
-		
-            this.listView = FindViewById<ListView>(Resource.Id.list);
-            this.listView.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1,
-                Android.Resource.Id.Text1, locales);
+            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
 
-            this.fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            this.fab.Hide(false);
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            this.toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+            drawerLayout.AddDrawerListener(this.toggle);
 
-            this.fab.PostDelayed(ShowFab, 300);
+            this.navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+            if (savedInstanceState == null)
+            {
+                SupportFragmentManager.BeginTransaction().Add(Resource.Id.fragment, new HomeFragment()).Commit();
+            }
+
+            navigationView.SetCheckedItem(Resource.Id.home);
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
+        protected override void OnPostCreate(Bundle savedInstanceState)
         {
-            this.MenuInflater.Inflate(Resource.Menu.main_menu, menu);
-            return true;
+            base.OnPostCreate(savedInstanceState);
+            this.toggle.SyncState();
         }
 
         protected override void OnResume()
         {
             base.OnResume();
-            this.fab.Click += Fab_Click;
-            this.listView.Scroll += ListView_Scroll;
-            ;
+            this.navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
         }
 
         protected override void OnPause()
         {
             base.OnPause();
-            this.fab.Click -= Fab_Click;
-            this.listView.Scroll -= ListView_Scroll;
-            ;
+            this.navigationView.NavigationItemSelected -= NavigationView_NavigationItemSelected;
         }
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+        public override void OnBackPressed()
         {
-            switch (item.ItemId)
+            if (drawerLayout != null && drawerLayout.IsDrawerOpen((int)GravityFlags.Start))
             {
-                case Resource.Id.menu_snack:
-                    ShowSnackActivity();
+                drawerLayout.CloseDrawer((int)GravityFlags.Start);
+            }
+            else {
+                base.OnBackPressed();
+            }
+        }
+
+        private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+        {
+            this.drawerLayout.CloseDrawer((int)GravityFlags.Start);
+            Fragment fragment = null;
+            FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+
+            switch (e.MenuItem.ItemId)
+            {
+                case Resource.Id.home:
+                    fragment = new HomeFragment();
                     break;
-                default:
-                    return base.OnOptionsItemSelected(item);
+                case Resource.Id.menus:
+                    fragment = new MenusFragment();
+                    break;
+                case Resource.Id.progress:
+                    fragment = new ProgressFragment();
+                    break;
+                case Resource.Id.menu_snack:
+                    fragment = new SnackbarFragment();
+                    break;
+                case Resource.Id.menu_tab:
+                    fragment = new TabFragment();
+                    break;
             }
 
-            return base.OnOptionsItemSelected(item);
-        }
-
-        private void ShowSnackActivity()
-        {
-            StartActivity(new Intent(this, typeof(SnackActivity)));
-        }
-
-        private void ShowFab()
-        {
-            fab.Show(true);
-            fab.SetShowAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.show_from_bottom));
-            fab.SetHideAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.hide_to_bottom));
-        }
-
-        private void Fab_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Intent(this, typeof(FloatingMenusActivity)));
-        }
-
-        private void ListView_Scroll(object sender, AbsListView.ScrollEventArgs e)
-        {
-            if (e.FirstVisibleItem > mPreviousVisibleItem)
-            {
-                fab.Hide(true);
-            }
-            else if (e.FirstVisibleItem < mPreviousVisibleItem)
-            {
-                fab.Show(true);
-            }
-
-            mPreviousVisibleItem = e.FirstVisibleItem;   
+            ft.Replace(Resource.Id.fragment, fragment).Commit();
+            e.Handled = true;
         }
     }
 }
